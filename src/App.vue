@@ -1,8 +1,23 @@
 <script setup>
 import Button from 'primevue/button';
+import { ref } from 'vue';
+import Menubar from 'primevue/menubar';
+const items = ref([
+    {
+        label: 'Home',
+        icon: 'pi pi-fw pi-home',
+        to: '/'
+    },
+    {
+        label: 'About',
+        icon: 'pi pi-fw pi-info-circle',
+        to: '/about'
+    }
+]);
 </script>
 
 <template>
+<Menubar :model="items" />
   <div class="container">
     <h1>Hildan K. Utomo</h1>
     <div class="button">
@@ -11,7 +26,7 @@ import Button from 'primevue/button';
       <Button icon="pi pi-instagram" severity="help" text rounded aria-label="LinkedIn" />
     </div>
   </div>
-  <!-- <Button label="LinkedIn" icon="pi pi-linkedin" severity="info" /> -->
+
 
 </template>
 
