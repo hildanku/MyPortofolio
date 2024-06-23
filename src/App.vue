@@ -18,21 +18,23 @@ const items = ref([
 </script>
 
 <template>
-<Menubar :model="items" />
+<!-- <Menubar :model="items" /> -->
   <div class="container">
     <Image class="rounded-image"/>
-    <h1>Hildan K. Utomo</h1>
+      <h1>Hildan K. Utomo</h1>
+      <h3 style="font-style: italic; margin-top: -5px;">Back End Enthusiast | Computer Science Student</h3>
     <div class="button">
       <Button icon="pi pi-linkedin" severity="info" text rounded aria-label="LinkedIn" />
-      <Button icon="pi pi-facebook" severity="info" text rounded aria-label="LinkedIn" />
-      <Button icon="pi pi-instagram" severity="help" text rounded aria-label="LinkedIn" />
+      <Button icon="pi pi-facebook" severity="info" text rounded aria-label="Facebook" />
+      <Button icon="pi pi-instagram" severity="help" text rounded aria-label="Instagram" />
+      <Button icon="pi pi-github" severity="secondary" text rounded aria-label="GitHub" />
     </div>
+    
   </div>
-
-
+  
 </template>
 
-<style scoped>
+<style scoped>  
 .rounded-image {
   border-radius: 50%;
   padding: 5px;
