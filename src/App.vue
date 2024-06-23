@@ -2,6 +2,7 @@
 import Button from 'primevue/button';
 import { ref } from 'vue';
 import Menubar from 'primevue/menubar';
+import Image from 'primevue/image';
 const items = ref([
     {
         label: 'Home',
@@ -19,6 +20,7 @@ const items = ref([
 <template>
 <Menubar :model="items" />
   <div class="container">
+    <Image class="rounded-image"/>
     <h1>Hildan K. Utomo</h1>
     <div class="button">
       <Button icon="pi pi-linkedin" severity="info" text rounded aria-label="LinkedIn" />
@@ -31,8 +33,16 @@ const items = ref([
 </template>
 
 <style scoped>
-.button {
-
+.rounded-image {
+  border-radius: 50%;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-image: url("../src/assets/linkedin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 250px;
 }
 .container {
   flex-direction: column; /* Arrange items vertically */
